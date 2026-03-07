@@ -2,6 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project overview
+Ollander is a project to support Dutch people migrating or working in Belgium, or mainly Flanders. The main language on the website is Dutch.
+
 ## Repository Structure
 
 Monorepo with two subprojects:
