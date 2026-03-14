@@ -65,6 +65,7 @@ Maak een AWS Lambda backend in Node in `ollander-back` die de nodige backend end
     * neem de naam over
     * genereer start waarde: dit is de huidige timestamp
     * return success is true
+* Voeg een voorbeeld API-call toe in `ollander-back/scripts/api.http`
 
 ### Taak 4
 Maak een AWS Lambda backend in Node in `ollander-back` die de nodige backend endpoints zal voorzien voor:

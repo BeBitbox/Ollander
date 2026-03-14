@@ -1,0 +1,3 @@
+### INIT call
+GET {{URL}}/api/init
+Accept: application/json

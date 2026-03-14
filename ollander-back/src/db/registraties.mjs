@@ -31,12 +31,18 @@ export async function zoekOpIp(ip) {
   return resultaat.Item ?? null;
 }
 
+function genereerChallenge(ip) {
+  const uniek = Math.random().toString(36).substring(2, 10).toUpperCase();
+  const laatste4 = ip.replace(/\./g, '').slice(-4).padStart(4, '0');
+  return uniek + laatste4;
+}
+
 export async function voegRegistratieToe(ip) {
   const item = {
     IP: ip,
     Naam: '',
     QuizGedaan: false,
-    Challenge: '',
+    Challenge: genereerChallenge(ip),
     Start: '',
     Stop: '',
     Score: 0,
