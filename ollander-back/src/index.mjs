@@ -5,6 +5,7 @@ import { verwerkVerzoek, registreerRoute, antwoord } from './routes/router.mjs';
 import './routes/init.mjs';
 import './routes/start.mjs';
 import './routes/stop.mjs';
+import './routes/top.mjs';
 
 export const handler = async (event) => {
   console.log('Inkomend verzoek:', JSON.stringify(event));

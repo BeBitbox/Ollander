@@ -9,6 +9,9 @@ Wanneer alle vragen beantwoord zijn, volgt er een overzicht van alle vragen en a
 Een score van 10 op 10 resulteert in 'Volwaardige Vlaming' status, van 7 tot 9 is een status van "bijna geïntegreerd", etc..
 De website zelf bevat nu ook een overzichtsbord met alle top 10 de kandidaten.
 
+## Notities
+* bij creatie van een nieuwe API-call in `ollander-back`, voeg een nieuw voorbeeld toe aan `ollander-back/scripts/api.http`
+
 ## Taken
 
 ### Taak 1
@@ -65,7 +68,6 @@ Maak een AWS Lambda backend in Node in `ollander-back` die de nodige backend end
     * neem de naam over
     * genereer start waarde: dit is de huidige timestamp
     * return success is true
-* Voeg een voorbeeld API-call toe in `ollander-back/scripts/api.http`
 
 ### Taak 4
 Maak een AWS Lambda backend in Node in `ollander-back` die de nodige backend endpoints zal voorzien voor:

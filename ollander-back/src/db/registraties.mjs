@@ -107,7 +107,7 @@ export async function haalTopTienOp() {
         ':gedaan': true,
         ':geblokkeerd': false,
       },
-      ProjectionExpression: 'naam, score, #rank, stop',
+      ProjectionExpression: 'naam, score, #rank, start, stop',
       ExpressionAttributeNames: { '#rank': 'rank' },
     })
   );

@@ -9,8 +9,8 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "challenge": "RQPRBMNX3158",
-  "naam": "Jan de Nederlander"
+  "challenge": "K10CCY5I3158",
+  "naam": "Jan de mooie"
 }
 
 
@@ -20,6 +20,10 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "challenge": "RQPRBMNX3158",
-  "score": 7
+  "challenge": "K10CCY5I3158",
+  "score": 4
 }
+
+### TOP call
+GET {{URL}}/api/top
+Accept: application/json
