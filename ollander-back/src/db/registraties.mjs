@@ -31,10 +31,9 @@ export async function zoekOpIp(ip) {
   return resultaat.Item ?? null;
 }
 
-function genereerChallenge(ip) {
-  const uniek = Math.random().toString(36).substring(2, 10).toUpperCase();
-  const laatste4 = ip.replace(/\./g, '').slice(-4).padStart(4, '0');
-  return uniek + laatste4;
+function genereerChallenge() {
+  const uniek = Math.random().toString(36).substring(2, 12);
+  return uniek + 'Turbo';
 }
 
 export async function voegRegistratieToe(ip) {
@@ -42,7 +41,7 @@ export async function voegRegistratieToe(ip) {
     ip,
     naam: '',
     quizGedaan: false,
-    challenge: genereerChallenge(ip),
+    challenge: genereerChallenge(),
     start: '',
     stop: '',
     score: 0,
@@ -107,8 +106,8 @@ export async function haalTopTienOp() {
         ':gedaan': true,
         ':geblokkeerd': false,
       },
-      ProjectionExpression: 'naam, score, #rank, start, stop',
-      ExpressionAttributeNames: { '#rank': 'rank' },
+      ProjectionExpression: 'naam, score, #rank, #start, #stop',
+      ExpressionAttributeNames: { '#rank': 'rank', '#start': 'start', '#stop': 'stop' },
     })
   );
   return (resultaat.Items ?? [])

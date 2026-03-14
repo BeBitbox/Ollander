@@ -130,5 +130,5 @@ Pas de frontend aan in `ollander-front` om te intrigeren met de backend in `olla
 * Op de pagina staat er in de sectie van een quiz, een overzicht met de top 10 deelnemers 
 
 ### Taak 7
-* Vul de automatisch test in `ollander-qa` aan die de website bezoekt en controle doet date de website zichtbaar is in de belangrijkste mobiele formaten, maar voor het quiz stukje
-* Doe een volautomatische test die de quiz in vult.
+* Vul de automatisch testen aan in `ollander-qa` die de website bezoekt en controle doet dat de website zichtbaar is in de belangrijkste mobiele formaten voor het quiz stukje
+* Doe een volautomatische happy path test die de quiz in vult.
