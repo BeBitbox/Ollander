@@ -4,6 +4,7 @@ import { verwerkVerzoek, registreerRoute, antwoord } from './routes/router.mjs';
 // Elke route-module registreert zichzelf
 import './routes/init.mjs';
 import './routes/start.mjs';
+import './routes/stop.mjs';
 
 export const handler = async (event) => {
   console.log('Inkomend verzoek:', JSON.stringify(event));

@@ -81,6 +81,23 @@ export async function werkRegistratieBij(ip, velden) {
   return resultaat.Attributes;
 }
 
+export async function telBeterePlaatsen(rank) {
+  const resultaat = await docClient.send(
+    new ScanCommand({
+      TableName: TABEL,
+      FilterExpression: 'quizGedaan = :gedaan AND blocked = :geblokkeerd AND #rank < :rank',
+      ExpressionAttributeValues: {
+        ':gedaan': true,
+        ':geblokkeerd': false,
+        ':rank': rank,
+      },
+      ExpressionAttributeNames: { '#rank': 'rank' },
+      Select: 'COUNT',
+    })
+  );
+  return (resultaat.Count ?? 0) + 1;
+}
+
 export async function haalTopTienOp() {
   const resultaat = await docClient.send(
     new ScanCommand({

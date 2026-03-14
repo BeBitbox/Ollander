@@ -9,6 +9,17 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "challenge": "ABC123EF0001",
+  "challenge": "RQPRBMNX3158",
   "naam": "Jan de Nederlander"
+}
+
+
+### STOP call
+POST {{URL}}/api/stop
+Content-Type: application/json
+Accept: application/json
+
+{
+  "challenge": "RQPRBMNX3158",
+  "score": 7
 }
