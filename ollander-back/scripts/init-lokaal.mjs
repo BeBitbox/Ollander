@@ -22,8 +22,8 @@ if (TableNames.includes('ollander_registraties')) {
 
 await client.send(new CreateTableCommand({
   TableName: 'ollander_registraties',
-  AttributeDefinitions: [{ AttributeName: 'IP', AttributeType: 'S' }],
-  KeySchema: [{ AttributeName: 'IP', KeyType: 'HASH' }],
+  AttributeDefinitions: [{ AttributeName: 'ip', AttributeType: 'S' }],
+  KeySchema: [{ AttributeName: 'ip', KeyType: 'HASH' }],
   BillingMode: 'PAY_PER_REQUEST',
 }));
 

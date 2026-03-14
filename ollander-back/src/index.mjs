@@ -3,6 +3,7 @@ import { verwerkVerzoek, registreerRoute, antwoord } from './routes/router.mjs';
 // Routes worden hier geregistreerd bij het laden van de Lambda
 // Elke route-module registreert zichzelf
 import './routes/init.mjs';
+import './routes/start.mjs';
 
 export const handler = async (event) => {
   console.log('Inkomend verzoek:', JSON.stringify(event));

@@ -17,8 +17,8 @@ registreerRoute('GET', '/api/init', async (event) => {
   }
 
   return antwoord(200, {
-    naam: registratie.Naam,
-    quizGedaan: registratie.QuizGedaan,
-    challenge: registratie.Challenge.slice(0, -4),
+    naam: registratie.naam,
+    quizGedaan: registratie.quizgedaan,
+    challenge: registratie.challenge.slice(0, -4),
   });
 });

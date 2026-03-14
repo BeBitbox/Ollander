@@ -1,3 +1,14 @@
 ### INIT call
 GET {{URL}}/api/init
 Accept: application/json
+
+
+### START call
+POST {{URL}}/api/start
+Content-Type: application/json
+Accept: application/json
+
+{
+  "challenge": "ABC123EF0001",
+  "naam": "Jan de Nederlander"
+}

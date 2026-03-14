@@ -10,22 +10,22 @@ const TABEL = 'ollander_registraties';
 
 /**
  * Data model ollander_registraties:
- * - IP:          String  (primary key)
- * - Naam:        String
- * - QuizGedaan:  Boolean
- * - Challenge:   String
- * - Start:       String  (ISO 8601 timestamp)
- * - Stop:        String  (ISO 8601 timestamp)
- * - Score:       Number
- * - Rank:        Number
- * - Blocked:     Boolean
+ * - ip:          String  (primary key)
+ * - naam:        String
+ * - quizGedaan:  Boolean
+ * - challenge:   String
+ * - start:       String  (ISO 8601 timestamp)
+ * - stop:        String  (ISO 8601 timestamp)
+ * - score:       Number
+ * - rank:        Number
+ * - blocked:     Boolean
  */
 
 export async function zoekOpIp(ip) {
   const resultaat = await docClient.send(
     new GetCommand({
       TableName: TABEL,
-      Key: { IP: ip },
+      Key: { ip },
     })
   );
   return resultaat.Item ?? null;
@@ -39,20 +39,20 @@ function genereerChallenge(ip) {
 
 export async function voegRegistratieToe(ip) {
   const item = {
-    IP: ip,
-    Naam: '',
-    QuizGedaan: false,
-    Challenge: genereerChallenge(ip),
-    Start: '',
-    Stop: '',
-    Score: 0,
-    Rank: 0,
-    Blocked: false,
+    ip,
+    naam: '',
+    quizGedaan: false,
+    challenge: genereerChallenge(ip),
+    start: '',
+    stop: '',
+    score: 0,
+    rank: 0,
+    blocked: false,
   };
   await docClient.send(
     new PutCommand({
       TableName: TABEL,
-      ConditionExpression: 'attribute_not_exists(IP)',
+      ConditionExpression: 'attribute_not_exists(ip)',
       Item: item,
     })
   );
@@ -71,7 +71,7 @@ export async function werkRegistratieBij(ip, velden) {
   const resultaat = await docClient.send(
     new UpdateCommand({
       TableName: TABEL,
-      Key: { IP: ip },
+      Key: { ip },
       UpdateExpression: updateExpressie,
       ExpressionAttributeNames: expressieNamen,
       ExpressionAttributeValues: expressieWaarden,
@@ -85,16 +85,16 @@ export async function haalTopTienOp() {
   const resultaat = await docClient.send(
     new ScanCommand({
       TableName: TABEL,
-      FilterExpression: 'QuizGedaan = :gedaan AND Blocked = :geblokkeerd',
+      FilterExpression: 'quizGedaan = :gedaan AND blocked = :geblokkeerd',
       ExpressionAttributeValues: {
         ':gedaan': true,
         ':geblokkeerd': false,
       },
-      ProjectionExpression: 'Naam, Score, #Rank, Stop',
-      ExpressionAttributeNames: { '#Rank': 'Rank' },
+      ProjectionExpression: 'naam, score, #rank, stop',
+      ExpressionAttributeNames: { '#rank': 'rank' },
     })
   );
   return (resultaat.Items ?? [])
-    .sort((a, b) => b.Score - a.Score || a.Stop.localeCompare(b.Stop))
+    .sort((a, b) => a.rank - b.rank)
     .slice(0, 10);
 }
