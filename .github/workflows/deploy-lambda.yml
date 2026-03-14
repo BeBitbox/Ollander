@@ -1,0 +1,55 @@
+name: Deploy Lambda naar AWS
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'ollander-back/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build en deploy Lambda
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Stel Node 24 in
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Installeer productie-afhankelijkheden
+        working-directory: ollander-back
+        run: npm ci --omit=dev
+
+      - name: Maak deployment package
+        working-directory: ollander-back
+        run: zip -r ../function.zip src node_modules package.json
+
+      - name: Configureer AWS-credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy naar AWS Lambda
+        run: |
+          aws lambda update-function-code \
+            --function-name ${{ secrets.LAMBDA_FUNCTION_NAME }} \
+            --zip-file fileb://function.zip
+
+      - name: Wacht op update-voltooiing
+        run: |
+          aws lambda wait function-updated \
+            --function-name ${{ secrets.LAMBDA_FUNCTION_NAME }}
+
+      - name: Publiceer nieuwe versie
+        run: |
+          aws lambda publish-version \
+            --function-name ${{ secrets.LAMBDA_FUNCTION_NAME }} \
+            --description "Deploy vanuit GitHub Actions - commit ${{ github.sha }}"

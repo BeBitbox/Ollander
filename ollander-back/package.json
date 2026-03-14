@@ -1,0 +1,20 @@
+{
+  "name": "ollander-back",
+  "version": "1.0.0",
+  "description": "AWS Lambda backend voor de Ollander quiz",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node src/index.mjs",
+    "package": "zip -r function.zip src package.json package-lock.json node_modules",
+    "lokaal:init": "DYNAMODB_ENDPOINT=http://localhost:8000 node scripts/init-lokaal.mjs",
+    "lokaal:test": "DYNAMODB_ENDPOINT=http://localhost:8000 node scripts/test-lokaal.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3",
+    "@aws-sdk/lib-dynamodb": "^3"
+  }
+}
