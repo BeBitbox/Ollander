@@ -105,7 +105,7 @@
 
           <h2 class="text-3xl font-black mb-2">🧪 Ben jij al een echte Vlaming?</h2>
           <p class="opacity-90 mb-6">
-            Doe de Ollander Integratiequiz en ontdek hoe Vlaams je eigenlijk al bent!
+            Doe de Ollander Integratiequiz en ontdek hoe Vlaams ge eigenlijk al zijt!
           </p>
 
           <!-- Laden -->
@@ -121,8 +121,8 @@
               <ul class="space-y-1 opacity-90 list-disc list-inside">
                 <li>10 ludieke vragen over Vlaamse cultuur en gewoonten</li>
                 <li>Na elk antwoord opent de volgende vraag direct</li>
-                <li>⏱️ <strong>Snelheid telt!</strong> Hoe sneller, hoe hoger je eindranking</li>
-                <li>Je kunt de quiz slechts één keer doen</li>
+                <li>⏱️ <strong>Snelheid telt!</strong> Hoe sneller, hoe hoger uw eindranking</li>
+                <li>Ge kunt de quiz maar éénmaal doen</li>
               </ul>
             </div>
 
@@ -134,7 +134,7 @@
               <input
                   v-model="formulierNaam"
                   type="text"
-                  placeholder="Jouw naam (bv. Kees Pannekoek)"
+                  placeholder="Uw naam (bv. Kees Pannekoek)"
                   class="flex-1 rounded-lg px-4 py-3 text-gray-800 font-medium focus:outline-none focus:ring-2 focus:ring-yellow-400 disabled:opacity-50"
                   :disabled="quizGedaan || bezig"
                   required
@@ -152,7 +152,7 @@
             </form>
 
             <p v-if="quizGedaan" class="mt-3 text-sm opacity-75 text-center">
-              Je hebt de quiz al gedaan. Bekijk de top 10 hieronder!
+              Ge hebt de quiz al gedaan. Bekijk de top 10 hieronder!
             </p>
           </div>
 
@@ -390,7 +390,7 @@ const vragen = [
     juist: 0,
   },
   {
-    vraag: '🏡 Je Belgische buurvrouw zegt: Wat een schoon huis heb gij! Wat bedoelt ze?',
+    vraag: '🏡 Uw Belgische buurvrouw zegt: Wat een schoon huis heb gij! Wat bedoelt ze?',
     opties: ['Jouw huis is te groot', 'Jouw huis is goed gepoetst', 'Jouw huis is een caravan', 'Jouw huis is mooi'],
     juist: 3,
   },
@@ -400,12 +400,12 @@ const vragen = [
     juist: 3,
   },
   {
-    vraag: '🥃 Het is gelukt! Ge moogt naar een Vlaams informeel feestjes. Hoe begroet je uw oudere gastvrouw?',
+    vraag: '🥃 Het is gelukt! Ge moogt naar een Vlaams informeel feestje. Hoe begroet ge uw oudere gastvrouw?',
     opties: [
       'Drie kussen',
       'Twee kussen',
       'Een handdruk',
-      'Tanden bloot tonen als teken van dominantie',
+      'Met de tanden bloot grommen als teken van dominantie',
     ],
     juist: 0,
   },
@@ -421,7 +421,7 @@ const vragen = [
   },
   {
     vraag: '👫 Een Vlaming vraagt jou: "Gaan we poepen?"',
-    opties: ['Ge biedt die persoon een Imodium aan tegen darmklachten', 'Er wacht jou een avontuur tussen de lakens', 'Ge wijst naar de toiletten.', 'Ga in foetus houding liggen tot de aggressieve Vlaming weg is.'],
+    opties: ['Ge biedt die persoon een Imodium aan tegen darmklachten', 'Der wacht een avontuur tussen de lakens', 'Ge wijst naar de toiletten.', 'Ge gaat in foetushouding liggen tot de agressieve Vlaming weg is.'],
     juist: 1,
   },
 ]
@@ -571,14 +571,14 @@ const dos = [
   'Zeg "een pintje" als ge een biertje op vat wilt bestellen.',
   'Wees bescheiden op het Vlaams grondgebied. Knokke, Sint-Martens-Latem en Brasschaat zijn de uitzonderingen.',
   'Lach met Heineken! Het is kattepis. Daar is elke Belg het over eens.',
-  'Brood verpak je in een papieren broodzak, niet in plastiek 🤮.',
+  'Verpak brood altijd in een papieren broodzak, niet in plastiek 🤮.',
   'Gebruik Paycontact of Bancontact voor betalingen. Voor in te loggen: Itsme',
 ]
 
 const donts = [
   'Begin niet over de taalgrens tenzij ge zeker weet wat ge doet. Dat is een mijnenveld.',
   'Vraag niet naar "koffie verkeerd". Dat bestaat niet. Vraag een latté of een cappuccino.',
-  'Lach niet met onze politiek. De Nederlands politiek is tegenwoordig niet meer beter 😉',
+  'Lach niet met onze politiek. De Nederlandse politiek is tegenwoordig niet meer beter 😉',
   'Onderschat de Belgische bureaucratie niet. Plan drie keer zoveel tijd als normaal.',
   'Gierigheid is een zonde. Vecht om als eerste een rondje te trakteren.'
 ]
@@ -617,7 +617,7 @@ const etenDrinken = [
   {
     emoji: '🫙',
     naam: 'Jenever',
-    uitleg: 'Belgische gin. Wordt gedronken in een te vol glaasje. Eerste slok doe je staand, hoofd gebogen. Traditie.',
+    uitleg: 'Belgische gin. Wordt gedronken in een te vol glaasje. Eerste slok doe ge staand, hoofd gebogen. Traditie.',
   },
   {
     emoji: '🍲',
