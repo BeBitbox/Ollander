@@ -16,6 +16,7 @@ No backend exists in this repository yet.
 ## Commands
 
 All commands must be run from within their respective subproject directories.
+When new source files are created, add them to Git.
 
 ### Frontend (`ollander-front/`)
 
