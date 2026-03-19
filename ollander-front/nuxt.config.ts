@@ -9,6 +9,21 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Claude Code' },
         { name: 'google-adsense-account', content: 'ca-pub-7526091117069803' },
       ],
+      script: [
+        {
+          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7526091117069803',
+          async: true,
+          crossorigin: 'anonymous',
+        },
+      ],
+    },
+  },
+  routeRules: {
+    '/**': {
+      headers: {
+        'Content-Security-Policy':
+          "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com; frame-src https://googleads.g.doubleclick.net; img-src 'self' data: http://localhost https://*.google.com https://*.googlesyndication.com;",
+      },
     },
   },
   runtimeConfig: {
