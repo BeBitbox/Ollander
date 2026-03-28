@@ -83,7 +83,7 @@
       </section>
 
       <!-- Advertentie tussen secties -->
-      <AdInArticle />
+      <AdInArticle/>
 
       <!-- Eten & Drinken -->
       <section id="eten">
@@ -303,26 +303,10 @@
 
       <!-- Zijbalkenadvertentie (onderaan op mobiel, verborgen boven de vouwlijn) -->
       <div class="mt-4">
-        <AdSidebar />
+        <AdSidebar/>
       </div>
 
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-      <div class="max-w-4xl mx-auto px-4 py-10 text-center">
-        <div class="text-4xl mb-3">🧡🇧🇪</div>
-        <p class="text-xl font-bold mb-2">ollander.be</p>
-        <p class="text-gray-400 text-sm max-w-md mx-auto">
-          Gemaakt met liefde voor alle Nederlanders die de moed hadden om de grens over te steken.
-          Proficiat. Ge zijt hier nu. En het is hier eigenlijk best tof.
-        </p>
-        <p class="text-gray-500 text-xs mt-4">
-          Geen Hollanders werden gekwetst bij het maken van deze website. Dat denken we toch...
-        </p>
-      </div>
-    </footer>
-
   </div>
 </template>
 
