@@ -315,8 +315,15 @@ import AdSidebar from "~/components/AdSidebar.vue";
 import AdInArticle from "~/components/AdInArticle.vue";
 
 useSeoMeta({
-  title: 'ollander.be — Welkom in Vlaanderen, ollander!',
-  description: 'De complete overlevingsgids voor Nederlanders die naar Vlaanderen komen wonen en werken.',
+  title: 'Ollander – Overlevingsgids voor Nederlanders in Vlaanderen',
+  description: 'Alles wat een Nederlander moet weten om te overleven in Vlaanderen: woordenboek, do\'s & don\'ts, eten, drinken en een quiz.',
+  ogTitle: 'Ollander – Overlevingsgids voor Nederlanders in Vlaanderen',
+  ogDescription: 'Alles wat een Nederlander moet weten om te overleven in Vlaanderen: woordenboek, do\'s & don\'ts, eten, drinken en een quiz.',
+  ogUrl: 'https://ollander.be/',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://ollander.be/' }],
 })
 
 // --- API configuratie ---

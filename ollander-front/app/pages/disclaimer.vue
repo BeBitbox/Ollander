@@ -75,5 +75,10 @@ useSeoMeta({
   description: 'Lees de disclaimer van Ollander over aansprakelijkheid, externe links en het gebruik van de informatie op deze website.',
   ogTitle: 'Disclaimer – Ollander',
   ogDescription: 'Lees de disclaimer van Ollander over aansprakelijkheid, externe links en het gebruik van de informatie op deze website.',
+  ogUrl: 'https://ollander.be/disclaimer',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://ollander.be/disclaimer' }],
 })
 </script>

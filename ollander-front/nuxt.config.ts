@@ -2,12 +2,33 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
+
+  // Sitemap — sluit /api/** uit
+  sitemap: {
+    siteUrl: 'https://ollander.be',
+    exclude: ['/api/**'],
+  },
+
   app: {
     head: {
+      htmlAttrs: { lang: 'nl' },
       meta: [
-        { name: 'author', content: 'Claude Code' },
+        { name: 'author', content: 'BitBox' },
         { name: 'google-adsense-account', content: 'ca-pub-7526091117069803' },
+        // Globale Open Graph defaults — worden per pagina overschreven via useSeoMeta()
+        { property: 'og:site_name', content: 'Ollander – Overlevingsgids voor Nederlanders in Vlaanderen' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:image', content: '/favicon-96x96.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'apple-mobile-web-app-title', content: 'ollander.be' },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' },
       ],
       script: [
         {

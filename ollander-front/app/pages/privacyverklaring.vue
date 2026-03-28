@@ -108,5 +108,10 @@ useSeoMeta({
   description: 'Lees hoe Ollander omgaat met jouw persoonsgegevens, cookies en advertenties conform de AVG/GDPR.',
   ogTitle: 'Privacyverklaring – Ollander',
   ogDescription: 'Lees hoe Ollander omgaat met jouw persoonsgegevens, cookies en advertenties conform de AVG/GDPR.',
+  ogUrl: 'https://ollander.be/privacyverklaring',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://ollander.be/privacyverklaring' }],
 })
 </script>

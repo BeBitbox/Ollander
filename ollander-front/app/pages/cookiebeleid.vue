@@ -91,5 +91,10 @@ useSeoMeta({
   description: 'Bekijk welke cookies en localStorage-sleutels Ollander gebruikt en hoe je jouw cookievoorkeuren kunt aanpassen.',
   ogTitle: 'Cookiebeleid – Ollander',
   ogDescription: 'Bekijk welke cookies en localStorage-sleutels Ollander gebruikt en hoe je jouw cookievoorkeuren kunt aanpassen.',
+  ogUrl: 'https://ollander.be/cookiebeleid',
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://ollander.be/cookiebeleid' }],
 })
 </script>
