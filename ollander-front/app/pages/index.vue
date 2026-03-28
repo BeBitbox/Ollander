@@ -324,6 +324,18 @@ useSeoMeta({
 
 useHead({
   link: [{ rel: 'canonical', href: 'https://ollander.be/' }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'ollander.be',
+        url: 'https://ollander.be/',
+        description: 'Overlevingsgids voor Nederlanders die in Vlaanderen wonen of werken.',
+      }),
+    },
+  ],
 })
 
 // --- API configuratie ---

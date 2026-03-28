@@ -1,6 +1,11 @@
 {
   "name": "ollander.be",
   "short_name": "ollander.be",
+  "description": "Overlevingsgids voor Nederlanders in Vlaanderen",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f97316",
+  "theme_color": "#f97316",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -14,8 +19,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#000000",
-  "display": "standalone"
+  ]
 }

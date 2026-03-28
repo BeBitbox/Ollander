@@ -71,32 +71,12 @@ Implementeer volledige SEO-optimalisatie:
 * Stap 6: Voeg een canonieke URL-tag toe via `useHead()` in `app/app.vue` of per pagina via `useSeoMeta()`
 
 ### Taak 3
-Voeg een favicon, web app manifest en gestructureerde data toe:
-* Stap 1: Maak favicons aan in `public/`:
-  * `favicon.ico` (32×32, oranje achtergrond, witte "O")
-  * `favicon-192.png` (192×192 PNG)
-  * `favicon-512.png` (512×512 PNG)
-  * Noteer in `nuxt.config.ts` dat deze door een grafisch ontwerper vervangen dienen te worden
-* Stap 2: Maak `public/manifest.webmanifest` aan:
-  ```json
-  {
-    "name": "Ollander",
-    "short_name": "Ollander",
-    "description": "Overlevingsgids voor Nederlanders in Vlaanderen",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#f97316",
-    "theme_color": "#f97316",
-    "icons": [
-      { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
-      { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" }
-    ]
-  }
-  ```
-* Stap 3: Verwijs naar manifest en favicons in `nuxt.config.ts` via `app.head.link`
-* Stap 4: Voeg JSON-LD gestructureerde data toe aan `index.vue` via `useHead()`:
+Link de favicons, site manifest en gestructureerde data: de favicons staan in `public/` en het webmanifest in `public/manifest.webmanifest`
+* Stap 1: Verwijs naar manifest en favicons in `nuxt.config.ts` via `app.head.link`
+* Stap 2: Voeg JSON-LD gestructureerde data toe aan `index.vue` via `useHead()`:
   * Type: `WebSite` met `name`, `url` en `description`
   * Type: `BreadcrumbList` is niet van toepassing op de startpagina; sla dit over
+* Stap 3: controleer dat alles correct gelinkt is.
 
 ### Taak 4
 Maak een aangepaste 404-foutpagina en valideer de lighthouse-score:
