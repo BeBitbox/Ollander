@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     '/**': {
       headers: {
         'Content-Security-Policy':
-          "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com; frame-src https://googleads.g.doubleclick.net; img-src 'self' data: http://localhost https://*.google.com https://*.googlesyndication.com;",
+          "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com; frame-src https://googleads.g.doubleclick.net; img-src 'self' data: http://localhost https://*.google.com https://*.googlesyndication.com; connect-src 'self' https://u3qcym3sb0.execute-api.eu-west-3.amazonaws.com;",
       },
     },
   },

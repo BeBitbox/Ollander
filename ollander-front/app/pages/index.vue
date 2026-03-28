@@ -82,6 +82,9 @@
         </div>
       </section>
 
+      <!-- Advertentie tussen secties -->
+      <AdInArticle />
+
       <!-- Eten & Drinken -->
       <section id="eten">
         <h2 class="text-3xl font-black text-gray-800 mb-2">🍟 Eten & Drinken Survival Gids</h2>
@@ -298,6 +301,11 @@
 
       </section>
 
+      <!-- Zijbalkenadvertentie (onderaan op mobiel, verborgen boven de vouwlijn) -->
+      <div class="mt-4">
+        <AdSidebar />
+      </div>
+
     </main>
 
     <!-- Footer -->
@@ -319,6 +327,9 @@
 </template>
 
 <script setup lang="ts">
+import AdSidebar from "~/components/AdSidebar.vue";
+import AdInArticle from "~/components/AdInArticle.vue";
+
 useSeoMeta({
   title: 'ollander.be — Welkom in Vlaanderen, ollander!',
   description: 'De complete overlevingsgids voor Nederlanders die naar Vlaanderen komen wonen en werken.',
