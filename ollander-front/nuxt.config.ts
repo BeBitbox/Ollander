@@ -4,10 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
 
-  // Sitemap — sluit /api/** uit
+  site: {
+    url: 'https://ollander.be',
+    name: 'ollander',
+  },
   sitemap: {
-    siteUrl: 'https://ollander.be',
     exclude: ['/api/**'],
+    zeroRuntime: true,
   },
 
   app: {
