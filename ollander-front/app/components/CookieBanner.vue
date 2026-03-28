@@ -7,8 +7,8 @@
       <p class="text-sm text-gray-700 flex-1">
         Wij gebruiken cookies voor gepersonaliseerde advertenties via Google AdSense.
         Door op "Akkoord" te klikken, geef je toestemming conform de AVG/GDPR-regelgeving.
-        Lees ons <NuxtLink to="/cookiebeleid" class="underline hover:text-orange-600">cookiebeleid</NuxtLink>
-        en onze <NuxtLink to="/privacyverklaring" class="underline hover:text-orange-600">privacyverklaring</NuxtLink>.
+        Lees ons <NuxtLink to="/cookiebeleid" class="underline hover:text-orange-700">cookiebeleid</NuxtLink>
+        en onze <NuxtLink to="/privacyverklaring" class="underline hover:text-orange-700">privacyverklaring</NuxtLink>.
       </p>
       <div class="flex gap-2 shrink-0">
         <button

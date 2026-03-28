@@ -60,7 +60,7 @@
       </section>
 
       <div class="pt-4">
-        <NuxtLink to="/" class="inline-flex items-center gap-2 text-orange-600 font-semibold hover:underline">
+        <NuxtLink to="/" class="inline-flex items-center gap-2 text-orange-700 font-semibold hover:underline">
           ← Terug naar de startpagina
         </NuxtLink>
       </div>

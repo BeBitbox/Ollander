@@ -42,7 +42,7 @@
               <div class="flex-1">
                 <div class="flex items-center gap-2 flex-wrap">
                   <span class="bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded text-sm">🇳🇱 {{ woord.nl }}</span>
-                  <span class="text-gray-400">→</span>
+                  <span class="text-gray-500" aria-hidden="true">→</span>
                   <span class="bg-yellow-100 text-yellow-700 font-bold px-2 py-0.5 rounded text-sm">🇧🇪 {{ woord.vl }}</span>
                 </div>
               </div>
@@ -267,14 +267,14 @@
           <h3 class="text-2xl font-black text-gray-800 mb-1">🏆 De Vlaamse Erelijst</h3>
           <p class="text-gray-500 text-sm mb-5">Top 10 meest geïntegreerde Ollanders — gesorteerd op rank</p>
 
-          <div v-if="topTien.length === 0" class="text-center py-10 text-gray-400">
+          <div v-if="topTien.length === 0" class="text-center py-10 text-gray-500">
             <div class="text-4xl mb-2">🦗</div>
             <p>Nog geen deelnemers. Wees de eerste!</p>
           </div>
 
           <table v-else class="w-full text-sm">
             <thead>
-            <tr class="text-left text-gray-400 border-b border-gray-100 text-xs uppercase tracking-wide">
+            <tr class="text-left text-gray-500 border-b border-gray-100 text-xs uppercase tracking-wide">
               <th class="pb-2 font-semibold w-8">#</th>
               <th class="pb-2 font-semibold">Naam</th>
               <th class="pb-2 font-semibold text-right">Score</th>
@@ -287,7 +287,7 @@
                 :key="entry.plaats"
                 class="border-b border-gray-50 hover:bg-gray-50 transition-colors"
             >
-              <td class="py-2.5 font-bold text-gray-400 text-xs">{{ entry.plaats }}</td>
+              <td class="py-2.5 font-bold text-gray-500 text-xs">{{ entry.plaats }}</td>
               <td class="py-2.5 font-semibold text-gray-800">
                 {{ entry.plaats === 1 ? '🥇' : entry.plaats === 2 ? '🥈' : entry.plaats === 3 ? '🥉' : '' }}
                 {{ entry.naam }}

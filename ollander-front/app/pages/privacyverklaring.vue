@@ -15,7 +15,7 @@
         <h2 class="text-xl font-bold text-gray-900 mb-3">1. Wie zijn wij?</h2>
         <p>
           Deze website wordt beheerd door <strong>BitBox</strong>, bereikbaar via
-          <a href="mailto:ollander.dpo@bitbox.be" class="text-orange-600 underline">ollander.dpo@bitbox.be</a>.
+          <a href="mailto:ollander.dpo@bitbox.be" class="text-orange-700 underline">ollander.dpo@bitbox.be</a>.
           Wij zijn de verwerkingsverantwoordelijke voor de persoonsgegevens die via deze website worden verwerkt.
         </p>
       </section>
@@ -50,7 +50,7 @@
         </p>
         <p class="mt-1">
           Meer informatie over hoe Google jouw gegevens verwerkt, vind je in het
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-orange-600 underline">privacybeleid van Google</a>.
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-orange-700 underline">privacybeleid van Google</a>.
         </p>
         <p class="mt-1"><strong>Rechtsgrondslag:</strong> toestemming (art. 6, lid 1, sub a AVG).</p>
         <h3 class="font-semibold text-gray-800 mt-4 mb-1">3.3 Quiz</h3>
@@ -81,19 +81,19 @@
         </ul>
         <p class="mt-3">
           Voor verzoeken kun je contact opnemen via
-          <a href="mailto:ollander.dpo@bitbox.be" class="text-orange-600 underline">ollander.dpo@bitbox.be</a>.
+          <a href="mailto:ollander.dpo@bitbox.be" class="text-orange-700 underline">ollander.dpo@bitbox.be</a>.
         </p>
       </section>
 
       <section>
         <h2 class="text-xl font-bold text-gray-900 mb-3">6. Wijzigingen</h2>
         <p>
-          Wij behouden het recht deze privacyverklaring te wijzigen. De meest actuele versie is altijd beschikbaar via <NuxtLink to="/privacyverklaring" class="text-orange-600 underline">ollander.be/privacyverklaring</NuxtLink>.
+          Wij behouden het recht deze privacyverklaring te wijzigen. De meest actuele versie is altijd beschikbaar via <NuxtLink to="/privacyverklaring" class="text-orange-700 underline">ollander.be/privacyverklaring</NuxtLink>.
         </p>
       </section>
 
       <div class="pt-4">
-        <NuxtLink to="/" class="inline-flex items-center gap-2 text-orange-600 font-semibold hover:underline">
+        <NuxtLink to="/" class="inline-flex items-center gap-2 text-orange-700 font-semibold hover:underline">
           ← Terug naar de startpagina
         </NuxtLink>
       </div>

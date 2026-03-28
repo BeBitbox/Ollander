@@ -50,7 +50,7 @@
 
         <p class="mt-4">
           De Google AdSense-cookies worden uitsluitend geplaatst nadat je daarvoor toestemming hebt gegeven. Een volledig overzicht van de cookies die Google gebruikt, vind je op de
-          <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener" class="text-orange-600 underline">pagina over advertentiecookies van Google</a>.
+          <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener" class="text-orange-700 underline">pagina over advertentiecookies van Google</a>.
         </p>
       </section>
 
@@ -71,12 +71,12 @@
         <h2 class="text-xl font-bold text-gray-900 mb-3">4. Meer informatie</h2>
         <p>
           Voor meer informatie over hoe wij omgaan met jouw persoonsgegevens verwijzen wij naar onze
-          <NuxtLink to="/privacyverklaring" class="text-orange-600 underline">privacyverklaring</NuxtLink>.
+          <NuxtLink to="/privacyverklaring" class="text-orange-700 underline">privacyverklaring</NuxtLink>.
         </p>
       </section>
 
       <div class="pt-4">
-        <NuxtLink to="/" class="inline-flex items-center gap-2 text-orange-600 font-semibold hover:underline">
+        <NuxtLink to="/" class="inline-flex items-center gap-2 text-orange-700 font-semibold hover:underline">
           ← Terug naar de startpagina
         </NuxtLink>
       </div>
