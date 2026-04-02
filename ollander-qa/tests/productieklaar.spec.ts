@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const CONSENT_KEY = 'ollander_consent';
-const JURIDISCHE_PAGINAS = ['/privacyverklaring', '/cookiebeleid', '/disclaimer'];
+const JURIDISCHE_PAGINAS = ['/privacyverklaring', '/disclaimer'];
 const ALLE_PAGINAS = ['/', ...JURIDISCHE_PAGINAS];
 
 // ─── Stap 2: Juridische pagina's ─────────────────────────────────────────────
@@ -24,9 +24,7 @@ test.describe("Juridische pagina's", () => {
       await page.goto(pad);
       const trefwoord = pad === '/privacyverklaring'
         ? 'Privacyverklaring'
-        : pad === '/cookiebeleid'
-          ? 'Cookiebeleid'
-          : 'Disclaimer';
+        : 'Disclaimer';
       await expect(page).toHaveTitle(new RegExp(trefwoord, 'i'));
     });
   }
@@ -49,7 +47,6 @@ test.describe('Footer links en cookievoorkeuren', () => {
       await page.goto(pad || '/');
       const footer = page.locator('footer');
       await expect(footer.getByRole('link', { name: /privacyverklaring/i })).toBeVisible();
-      await expect(footer.getByRole('link', { name: /cookiebeleid/i })).toBeVisible();
       await expect(footer.getByRole('link', { name: /disclaimer/i })).toBeVisible();
     });
 

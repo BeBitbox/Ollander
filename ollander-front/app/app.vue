@@ -7,6 +7,5 @@ import AppFooter from "~/components/AppFooter.vue";
     <NuxtRouteAnnouncer/>
     <NuxtPage/>
     <AppFooter/>
-    <CookieBanner/>
   </div>
 </template>

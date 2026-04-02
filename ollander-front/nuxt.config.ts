@@ -18,7 +18,6 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'nl' },
       meta: [
         { name: 'author', content: 'BitBox' },
-        { name: 'google-adsense-account', content: 'ca-pub-7526091117069803' },
         // Globale Open Graph defaults — worden per pagina overschreven via useSeoMeta()
         { property: 'og:site_name', content: 'Ollander – Overlevingsgids voor Nederlanders in Vlaanderen' },
         { property: 'og:type', content: 'website' },
@@ -33,20 +32,13 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
       ],
-      script: [
-        {
-          src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7526091117069803',
-          async: true,
-          crossorigin: 'anonymous',
-        },
-      ],
     },
   },
   routeRules: {
     '/**': {
       headers: {
         'Content-Security-Policy':
-          "default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com; frame-src https://googleads.g.doubleclick.net; img-src 'self' data: http://localhost https://*.google.com https://*.googlesyndication.com; connect-src 'self' https://u3qcym3sb0.execute-api.eu-west-3.amazonaws.com;",
+          "default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data: http://localhost; connect-src 'self' https://u3qcym3sb0.execute-api.eu-west-3.amazonaws.com;",
       },
     },
   },

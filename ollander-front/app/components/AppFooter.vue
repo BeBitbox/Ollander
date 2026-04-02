@@ -12,7 +12,6 @@
     <div class="max-w-4xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
         <NuxtLink to="/privacyverklaring" class="hover:text-white transition-colors">Privacyverklaring</NuxtLink>
-        <NuxtLink to="/cookiebeleid" class="hover:text-white transition-colors">Cookiebeleid</NuxtLink>
         <NuxtLink to="/disclaimer" class="hover:text-white transition-colors">Disclaimer</NuxtLink>
         <button
           class="hover:text-white transition-colors underline underline-offset-2"

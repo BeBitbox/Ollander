@@ -82,9 +82,6 @@
         </div>
       </section>
 
-      <!-- Advertentie tussen secties -->
-      <AdInArticle/>
-
       <!-- Eten & Drinken -->
       <section id="eten">
         <h2 class="text-3xl font-black text-gray-800 mb-2">🍟 Eten & Drinken Survival Gids</h2>
@@ -301,19 +298,11 @@
 
       </section>
 
-      <!-- Zijbalkenadvertentie (onderaan op mobiel, verborgen boven de vouwlijn) -->
-      <div class="mt-4">
-        <AdSidebar/>
-      </div>
-
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
-import AdSidebar from "~/components/AdSidebar.vue";
-import AdInArticle from "~/components/AdInArticle.vue";
-
 useSeoMeta({
   title: 'Ollander – Overlevingsgids voor Nederlanders in Vlaanderen',
   description: 'Alles wat een Nederlander moet weten om te overleven in Vlaanderen: woordenboek, do\'s & don\'ts, eten, drinken en een quiz.',
@@ -323,7 +312,7 @@ useSeoMeta({
 })
 
 useHead({
-  link: [{ rel: 'canonical', href: 'https://ollander.be/' }],
+  link: [{rel: 'canonical', href: 'https://ollander.be/'}],
   script: [
     {
       type: 'application/ld+json',

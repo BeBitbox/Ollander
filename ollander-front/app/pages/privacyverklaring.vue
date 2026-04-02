@@ -30,30 +30,12 @@
         </p>
         <ul class="list-disc list-inside mt-2 space-y-1">
           <li>IP-adres: voor te garanderen dat de quiz maar éénmaal per gebruiker wordt ingevuld</li>
-          <li>Je cookietoestemmingskeuze, opgeslagen in <code class="bg-gray-100 px-1 rounded">localStorage</code> onder de sleutel <code class="bg-gray-100 px-1 rounded">ollander_consent</code></li>
-          <li>Technische gegevens via Google AdSense (IP-adres, browsergegevens, surfgedrag) wanneer je daarvoor toestemming geeft</li>
         </ul>
       </section>
 
       <section>
         <h2 class="text-xl font-bold text-gray-900 mb-3">3. Waarvoor gebruiken wij jouw gegevens?</h2>
-
-        <h3 class="font-semibold text-gray-800 mt-4 mb-1">3.1 Cookietoestemming</h3>
-        <p>
-          Wij slaan jouw keuze omtrent cookies op in de lokale opslag van jouw browser. Dit gebeurt uitsluitend om te onthouden of je toestemming hebt gegeven of geweigerd, zodat de cookiebanner niet bij elk bezoek opnieuw verschijnt.
-        </p>
-        <p class="mt-1"><strong>Rechtsgrondslag:</strong> toestemming (art. 6, lid 1, sub a AVG).</p>
-
-        <h3 class="font-semibold text-gray-800 mt-4 mb-1">3.2 Gepersonaliseerde advertenties via Google AdSense</h3>
-        <p>
-          Wanneer je toestemming geeft, tonen wij advertenties via Google AdSense, een dienst van Google Ireland Ltd. (Gordon House, Barrow Street, Dublin 4, Ierland). Google verwerkt hierbij persoonsgegevens als verwerkingsverantwoordelijke voor haar eigen doeleinden (gepersonaliseerde advertenties).
-        </p>
-        <p class="mt-1">
-          Meer informatie over hoe Google jouw gegevens verwerkt, vind je in het
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="text-orange-700 underline">privacybeleid van Google</a>.
-        </p>
-        <p class="mt-1"><strong>Rechtsgrondslag:</strong> toestemming (art. 6, lid 1, sub a AVG).</p>
-        <h3 class="font-semibold text-gray-800 mt-4 mb-1">3.3 Quiz</h3>
+        <h3 class="font-semibold text-gray-800 mt-4 mb-1">3.1 Quiz</h3>
         <p>
           Wanneer je de quiz start, slaan we de opgegeven naam met uw IP op in een databank. Dit dient enkel en alleen om het scorebord te bewaren.
         </p>
