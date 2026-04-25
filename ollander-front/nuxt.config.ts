@@ -25,6 +25,9 @@ export default defineNuxtConfig({
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'apple-mobile-web-app-title', content: 'ollander.be' },
       ],
+      script: [
+        { defer: true, src: 'https://api.pirsch.io/pa.js', id: 'pianjs', 'data-code': 'joU0KkxJtgqA7wzIv65cXJcpddWH72z4' },
+      ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -38,7 +41,7 @@ export default defineNuxtConfig({
     '/**': {
       headers: {
         'Content-Security-Policy':
-          "default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self' data: http://localhost; connect-src 'self' https://u3qcym3sb0.execute-api.eu-west-3.amazonaws.com;",
+          "default-src 'self'; script-src 'self' 'unsafe-inline' https://api.pirsch.io; img-src 'self' data: http://localhost; connect-src 'self' https://u3qcym3sb0.execute-api.eu-west-3.amazonaws.com https://api.pirsch.io;",
       },
     },
   },
