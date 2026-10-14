@@ -378,8 +378,8 @@ const vragen = [
     juist: 1,
   },
   {
-    vraag: '🗣️ Wat is vijfde regel in de Brabançonne?',
-    opties: ['Wees ons doel in arbeid en in strijd.', 'Wat is de Brabançonne?', 'Wie kent die tekst nu van buiten?', 'Een Prinse van Oranje'],
+    vraag: '🦁 Wanneer viert Vlaanderen zijn eigen feestdag?',
+    opties: ['27 april', '21 juli', '11 juli', 'Elke dag dat de Rode Duivels winnen'],
     juist: 2,
   },
   {
@@ -403,12 +403,12 @@ const vragen = [
     juist: 3,
   },
   {
-    vraag: '🥃 Het is gelukt! Ge moogt naar een Vlaams informeel feestje. Hoe begroet ge uw oudere gastvrouw?',
+    vraag: '🥃 Het is gelukt! Ge moogt naar een Vlaams informeel feestje. Hoe begroet ge een oudere gastvrouw?',
     opties: [
       'Drie kussen',
-      'Twee kussen',
-      'Een handdruk',
+      'Een vuistje',
       'Met de tanden bloot grommen als teken van dominantie',
+      'Een handdruk',
     ],
     juist: 0,
   },
@@ -418,9 +418,9 @@ const vragen = [
     juist: 2,
   },
   {
-    vraag: 'Belgïe is legendarisch om zijn staatsstructuur. Hoeveel regeringen heeft dit klein landje?',
-    opties: ['1', '3', '6', '10'],
-    juist: 2,
+    vraag: '❔ Een Vlaming vraagt: "Spelen we vogelpik?" Wat gaat ge doen?',
+    opties: ['Duiven voederen op de markt', 'Darten', 'Naar de huisarts voor een prik', 'Elkaar spitse opmerkingen toewerpen'],
+    juist: 1,
   },
   {
     vraag: '👫 Een Vlaming vraagt jou: "Gaan we poepen?"',
