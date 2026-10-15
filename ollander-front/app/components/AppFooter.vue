@@ -13,12 +13,6 @@
       <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
         <NuxtLink to="/privacyverklaring" class="hover:text-white transition-colors">Privacyverklaring</NuxtLink>
         <NuxtLink to="/disclaimer" class="hover:text-white transition-colors">Disclaimer</NuxtLink>
-        <button
-          class="hover:text-white transition-colors underline underline-offset-2"
-          @click="resetCookievoorkeuren"
-        >
-          Cookievoorkeuren aanpassen
-        </button>
       </nav>
       <p class="shrink-0">&copy; {{ huidigJaar }} Ollander</p>
     </div>
@@ -27,9 +21,4 @@
 
 <script setup lang="ts">
 const huidigJaar = new Date().getFullYear()
-
-function resetCookievoorkeuren() {
-  localStorage.removeItem('ollander_consent')
-  window.location.reload()
-}
 </script>

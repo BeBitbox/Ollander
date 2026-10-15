@@ -44,9 +44,6 @@
       <section>
         <h2 class="text-xl font-bold text-gray-900 mb-3">4. Hoe lang bewaren wij jouw gegevens?</h2>
         <p>
-          De cookietoestemmingskeuze wordt opgeslagen in de lokale opslag van jouw browser en blijft bewaard totdat je de browseropslag wist of jouw keuze aanpast via de knop "Cookievoorkeuren aanpassen" in de footer. Wij als website-eigenaar bewaren geen kopie van deze keuze op onze servers.
-        </p>
-        <p>
           De naam en IP-adres worden maximaal één jaar in de databank bewaard, waarna die prompt wordt verwijderd.
         </p>
       </section>
@@ -58,7 +55,7 @@
           <li><strong>Recht op inzage</strong> – je kunt opvragen welke gegevens wij van jou verwerken</li>
           <li><strong>Recht op rectificatie</strong> – je kunt onjuiste gegevens laten corrigeren</li>
           <li><strong>Recht op verwijdering</strong> – je kunt verzoeken jouw gegevens te verwijderen</li>
-          <li><strong>Recht op intrekking van toestemming</strong> – je kunt jouw toestemming te allen tijde intrekken via de knop "Cookievoorkeuren aanpassen" in de footer</li>
+          <li><strong>Recht op intrekking van toestemming</strong> – je kunt jouw toestemming te allen tijde intrekken door contact met ons op te nemen</li>
           <li><strong>Recht op klacht</strong> – je kunt een klacht indienen bij de Gegevensbeschermingsautoriteit (België)</li>
         </ul>
         <p class="mt-3">

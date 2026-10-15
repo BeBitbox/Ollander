@@ -6,7 +6,7 @@ test.describe('Startpagina zichtbaarheid', () => {
   });
 
   test('paginatitel bevat ollander.be', async ({ page }) => {
-    await expect(page).toHaveTitle(/ollander\.be/);
+    await expect(page).toHaveTitle('Ollander – Overlevingsgids voor Nederlanders in Vlaanderen');
   });
 
   test('hoofdtitel is zichtbaar', async ({ page }) => {

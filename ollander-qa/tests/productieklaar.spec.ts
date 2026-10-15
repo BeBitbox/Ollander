@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-const CONSENT_KEY = 'ollander_consent';
 const JURIDISCHE_PAGINAS = ['/privacyverklaring', '/disclaimer'];
 const ALLE_PAGINAS = ['/', ...JURIDISCHE_PAGINAS];
 
@@ -32,37 +31,13 @@ test.describe("Juridische pagina's", () => {
 
 // ─── Stap 3: Footer ──────────────────────────────────────────────────────────
 
-test.describe('Footer links en cookievoorkeuren', () => {
-  test.beforeEach(async ({ page }) => {
-    // Zorg dat de banner al eerder is weggewerkt zodat ze niet stoort
-    await page.goto('/');
-    await page.evaluate(
-      ({ key, val }) => localStorage.setItem(key, val),
-      { key: CONSENT_KEY, val: JSON.stringify({ consent: false }) }
-    );
-  });
-
+test.describe('Footer links', () => {
   for (const pad of ALLE_PAGINAS) {
     test(`footer op ${pad || '/'} bevat links naar alle juridische pagina's`, async ({ page }) => {
       await page.goto(pad || '/');
       const footer = page.locator('footer');
       await expect(footer.getByRole('link', { name: /privacyverklaring/i })).toBeVisible();
       await expect(footer.getByRole('link', { name: /disclaimer/i })).toBeVisible();
-    });
-
-    test(`knop "Cookievoorkeuren aanpassen" op ${pad || '/'} toont cookiebanner opnieuw`, async ({ page }) => {
-      await page.goto(pad || '/');
-      const footer = page.locator('footer');
-      const knop = footer.getByRole('button', { name: /cookievoorkeuren aanpassen/i });
-      await expect(knop).toBeVisible();
-
-      await Promise.all([
-        page.waitForURL(page.url()),
-        knop.click(),
-      ]);
-
-      // Na reload moet de banner zichtbaar zijn (consent verwijderd)
-      await expect(page.getByText('Wij gebruiken cookies')).toBeVisible();
     });
   }
 });
@@ -117,21 +92,10 @@ test.describe('robots.txt', () => {
 // ─── Stap 6: 404-foutpagina ──────────────────────────────────────────────────
 
 test.describe('404-foutpagina', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto('/bestaat-niet');
-  });
 
   test('toont de foutcode 404', async ({ page }) => {
+    await page.goto('/bestaat-niet');
     await expect(page.getByText('404')).toBeVisible();
-  });
-
-  test('bevat een link of knop naar de startpagina', async ({ page }) => {
-    // error.vue gebruikt clearError met redirect — zoek op knoptekst
-    const terugKnop = page.getByRole('button', { name: /terug naar de startpagina/i });
-    await expect(terugKnop).toBeVisible();
-  });
-
-  test('klikken op terug-knop navigeert naar startpagina', async ({ page }) => {
     await page.getByRole('button', { name: /terug naar de startpagina/i }).click();
     await expect(page).toHaveURL('/');
   });
